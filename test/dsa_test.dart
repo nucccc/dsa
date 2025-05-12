@@ -1,5 +1,6 @@
 import 'package:dsa/binary_tree.dart' as bt;
 import 'package:dsa/dsa.dart';
+import 'package:dsa/linked_list.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -48,5 +49,14 @@ void main() {
 
       expect(elemsSorted, root.unroll().toList());
     }
+  });
+
+  test('test', () {
+    ListNode root = push(null, 1);
+    push(root, 2);
+    push(root, 3);
+    push(root, 4);
+
+    expect([1,2,3,4], unroll(root).toList());
   });
 }
